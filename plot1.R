@@ -22,4 +22,8 @@ df$DT<-dmy_hms(df$DateTime)
 df$Global_active_power<-as.numeric(df$Global_active_power) 
 
 # Print plot1
+
+png(filename="plot1.png")
 hist(df$Global_active_power,main="Global Active Power",col=2,xlab="Global Active Power(kilowatts)")
+dev.off()
+
